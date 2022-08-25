@@ -1,13 +1,14 @@
 package com.devtides.androidcoroutinesflow.viewmodel
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import com.devtides.androidcoroutinesflow.repository.NewsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class ListViewModel @Inject constructor(): ViewModel() {
+class ListViewModel @Inject constructor(repository: NewsRepository): ViewModel() {
 
-    val newsArticles = MutableLiveData<String>()
+    val newsArticles = repository.getNewsArticles().asLiveData()
 
 }

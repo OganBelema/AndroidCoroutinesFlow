@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.devtides.androidcoroutinesflow.R
 import com.devtides.androidcoroutinesretrofit.model.NewsArticle
 import kotlinx.android.synthetic.main.item_news_article.view.*
+import javax.inject.Inject
 
-class NewsListAdapter: RecyclerView.Adapter<NewsListAdapter.NewsItemViewHolder>() {
+class NewsListAdapter @Inject constructor(): RecyclerView.Adapter<NewsListAdapter.NewsItemViewHolder>() {
 
     private val newsItems = arrayListOf<NewsArticle>()
 
