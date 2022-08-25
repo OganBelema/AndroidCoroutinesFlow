@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.devtides.androidcoroutinesflow.R
 import com.devtides.androidcoroutinesflow.viewmodel.ListViewModel
 import com.devtides.coroutinesretrofit.view.NewsListAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     lateinit var viewModel: ListViewModel
